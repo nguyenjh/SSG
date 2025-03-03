@@ -1,0 +1,43 @@
+---
+export let activePage: string = "";
+---
+
+<nav class="navbar">
+    <ul>
+        <li class={activePage === "home" ? "active" : ""}>
+            <a href="/">Home</a>
+        </li>
+        <li class={activePage === "blog" ? "active" : ""}>
+            <a href="/blog">Blog</a>
+        </li>
+    </ul>
+</nav>
+
+<style>
+.navbar {
+    background: #222;
+    padding: 1rem;
+    text-align: center;
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.navbar li {
+    display: inline;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+.navbar .active a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+</style>

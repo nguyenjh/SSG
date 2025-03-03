@@ -1,0 +1,30 @@
+---
+import Navbar from "../components/Navbar.astro";
+export let title: string;
+export let activePage: string = "";
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>All About Twice</title>
+	</head>
+	<body>
+		<Navbar activePage={activePage} />
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
